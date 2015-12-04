@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCampusPlusEngine", "eCampusPlusEngine.csproj", "{BEE7A1B2-0977-4AAC-A545-3E1DF6D6184B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCampusPlusEngineRunner", "..\eCampusPlusEngineRunner\eCampusPlusEngineRunner.csproj", "{FFD194E0-8CD5-4B32-92BB-E9D7B40F6786}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCampusPlusEngine.Model", "..\eCampusPlusEngine.Model\eCampusPlusEngine.Model.csproj", "{8B0F3075-03B4-4F57-B204-C5EF160552D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{71320C8A-1A16-40FF-BAD1-4D032D58F77F}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEE7A1B2-0977-4AAC-A545-3E1DF6D6184B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE7A1B2-0977-4AAC-A545-3E1DF6D6184B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE7A1B2-0977-4AAC-A545-3E1DF6D6184B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE7A1B2-0977-4AAC-A545-3E1DF6D6184B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFD194E0-8CD5-4B32-92BB-E9D7B40F6786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFD194E0-8CD5-4B32-92BB-E9D7B40F6786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFD194E0-8CD5-4B32-92BB-E9D7B40F6786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFD194E0-8CD5-4B32-92BB-E9D7B40F6786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B0F3075-03B4-4F57-B204-C5EF160552D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B0F3075-03B4-4F57-B204-C5EF160552D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B0F3075-03B4-4F57-B204-C5EF160552D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B0F3075-03B4-4F57-B204-C5EF160552D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

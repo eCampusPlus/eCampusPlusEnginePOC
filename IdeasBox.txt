@@ -1,0 +1,14 @@
+1- DataSannityChecker
+	=> Ping url
+	=> Ping all components access data to check that exist
+	=> Sanity report web interface
+        => Data administration per country => Edition of json
+  -> Each Week/Month/Yeas ?? \ Schedual a notification to performe the action
+
+2- TABLE - PDF
+
+http://www.verypdf.com/wordpress/201308/how-to-read-tables-from-a-pdf-file-using-c-37988.html
+
+3- TODO
+
+4- TODO

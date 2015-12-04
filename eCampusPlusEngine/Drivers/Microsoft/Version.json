@@ -1,0 +1,21 @@
+﻿{
+    "iCampusPlus": {
+        "Drivers": {
+            "OS": "Microsoft",
+            "BROWSERS": [
+                {
+                    "NAME": "CHROME",
+                    "RUNNER": "EXE",
+                    "DRIVER": "Chromedriver",
+                    "VERSION": "1.0.0"
+                },
+                {
+                    "NAME": "IE",
+                    "RUNNER": "EXE",
+                    "DRIVER": "IEDriverServer",
+                    "VERSION": "1.0.0"
+                }
+            ]
+        }
+    }
+}

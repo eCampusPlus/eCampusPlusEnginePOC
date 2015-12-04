@@ -1,0 +1,14 @@
+E:\ETIS\Workspace\iCampusPlusRegistrationEngine\eCampusPlus\eCampusPlusEngine\eCampusPlusEngine.Model\bin\Debug\eCampusPlusEngine.Model.dll
+E:\ETIS\Workspace\iCampusPlusRegistrationEngine\eCampusPlus\eCampusPlusEngine\eCampusPlusEngine.Model\bin\Debug\eCampusPlusEngine.Model.pdb
+E:\ETIS\Workspace\iCampusPlusRegistrationEngine\eCampusPlus\eCampusPlusEngine\eCampusPlusEngine.Model\obj\Debug\eCampusPlusEngine.Model.dll
+E:\ETIS\Workspace\iCampusPlusRegistrationEngine\eCampusPlus\eCampusPlusEngine\eCampusPlusEngine.Model\obj\Debug\eCampusPlusEngine.Model.pdb
+E:\ETIS\Workspace\RepoGit\eCampusPlusRepo\eCampusPlusEngine\eCampusPlusEngine.Model\bin\Debug\eCampusPlusEngine.Model.dll
+E:\ETIS\Workspace\RepoGit\eCampusPlusRepo\eCampusPlusEngine\eCampusPlusEngine.Model\bin\Debug\eCampusPlusEngine.Model.pdb
+E:\ETIS\Workspace\RepoGit\eCampusPlusRepo\eCampusPlusEngine\eCampusPlusEngine.Model\obj\Debug\eCampusPlusEngine.Model.csprojResolveAssemblyReference.cache
+E:\ETIS\Workspace\RepoGit\eCampusPlusRepo\eCampusPlusEngine\eCampusPlusEngine.Model\obj\Debug\eCampusPlusEngine.Model.dll
+E:\ETIS\Workspace\RepoGit\eCampusPlusRepo\eCampusPlusEngine\eCampusPlusEngine.Model\obj\Debug\eCampusPlusEngine.Model.pdb
+E:\ETIS\Workspace\RepoGit\eCampusPlus\eCampusPlusEnginePOC\eCampusPlusEnginePOC\eCampusPlusEngine.Model\bin\Debug\eCampusPlusEngine.Model.dll
+E:\ETIS\Workspace\RepoGit\eCampusPlus\eCampusPlusEnginePOC\eCampusPlusEnginePOC\eCampusPlusEngine.Model\bin\Debug\eCampusPlusEngine.Model.pdb
+E:\ETIS\Workspace\RepoGit\eCampusPlus\eCampusPlusEnginePOC\eCampusPlusEnginePOC\eCampusPlusEngine.Model\obj\Debug\eCampusPlusEngine.Model.dll
+E:\ETIS\Workspace\RepoGit\eCampusPlus\eCampusPlusEnginePOC\eCampusPlusEnginePOC\eCampusPlusEngine.Model\obj\Debug\eCampusPlusEngine.Model.pdb
+E:\ETIS\Workspace\RepoGit\eCampusPlus\eCampusPlusEnginePOC\eCampusPlusEnginePOC\eCampusPlusEngine.Model\obj\Debug\eCampusPlusEngine.Model.csprojResolveAssemblyReference.cache
