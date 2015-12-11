@@ -67,9 +67,20 @@ namespace Fr.eCampusPlus.Engine.Runner
             //pageId = "ACNT-CAND-NAV";
             //page = new Page(plateformeId, pageId, string.Empty, false);
             //Process some actions
-            pageId = "ACNT-CAND-STDNT-INFO";
+            //pageId = "ACNT-CAND-STDNT-INFO";
+            //page = new Page(plateformeId, pageId, string.Empty, false);
+            //pageId = "ACNT-CAND-STDNT-SKILLS";
+            //page = new Page(plateformeId, pageId, string.Empty, false);
+            //pageId = "ACNT-CAND-STDNT-LANGUA";
+            //page = new Page(plateformeId, pageId, string.Empty, false);
+
+            pageId = "ACNT-CAND-STDNT-CHOSE-SCHOOL";
             page = new Page(plateformeId, pageId, string.Empty, false);
             ProcessingAction(page, eCampusPlusUser, eCampusPlusConfig);
+
+            //END
+            Browser.WebDriver.Quit();
+            
         }
 
         private static void ProcessingAction(Page page, eCampusPlusUser eCampusPlusUser, eCampusPlusConfiguration eCampusPlusConfig)
@@ -83,8 +94,14 @@ namespace Fr.eCampusPlus.Engine.Runner
                 {
                     string value = property .GetValue(eCampusPlusUser).ToString();
                     PagesHelper.PerformAction((PagesHelper.ActionElementType)Enum.Parse(typeof(PagesHelper.ActionElementType), e.ElementType, true), e.Accessor, value);
+                    if (e.RequireReload)
+                    {
+                        Browser.WebDriver.Navigate().Refresh();
+                        PagesHelper.PerformAction((PagesHelper.ActionElementType)Enum.Parse(typeof(PagesHelper.ActionElementType), e.PreActionField.ElementType, true), e.PreActionField.Accessor);
+                    }
                 }
-            });            
+            });  
+            
         }
     }
 }

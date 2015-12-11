@@ -1,15 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
 using System.IO;
 using System.Linq;
+using eCampusPlus.Engine.Configuration.Drivers;
 using Fr.eCampusPlus.Engine.Model.POCO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 namespace Fr.eCampusPlus.Engine.Pages
 {
-    public class Page : BasicPage
+    public class Page : BasicPage, IDisposable
     {
 
         #region Constructors
@@ -49,6 +51,11 @@ namespace Fr.eCampusPlus.Engine.Pages
                 config = serializer.Deserialize(sr, config.GetType()) as eCampusPlusPagesConfiguration;
             }
             PageElements = config.Plateforme.FirstOrDefault(pt => pt.PlateformeId.Equals(PlateformeId)).Pages.FirstOrDefault(pg => pg.PageId.Equals(PageId)).Fields;
+        }
+
+        public void Dispose()
+        {
+            Browser.WebDriver.Quit();
         }
     }
 }

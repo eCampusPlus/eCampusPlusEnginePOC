@@ -1,4 +1,5 @@
-﻿using eCampusPlus.Engine.Configuration.Drivers;
+﻿using System;
+using eCampusPlus.Engine.Configuration.Drivers;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumWebdriverHelpers;
@@ -18,18 +19,23 @@ namespace Fr.eCampusPlus.Engine.Pages
         public enum ActionElementType
         {
             INPUT,
+            INPUT_FILE,
+            HIDDEN_INPUT_FILE,
             CHECKBOX,
             DROPDOWNLIST,
             BUTTON,
             LINK,
-            DIV
+            DIV,
+            TABLE_CELL_LINK,
+            FORM
         };
         #endregion
 
         #region Actions helpers
 
         private static void InputSetHelper(string xPath,string value)
-        {            
+        {
+            InputClearHelper(xPath);
             Browser.Driver.FindElement(By.XPath(xPath)).SendKeys(value);
         }
 
@@ -58,6 +64,29 @@ namespace Fr.eCampusPlus.Engine.Pages
         {
             Browser.Driver.FindElement(By.XPath(xPath)).Click();
         }
+
+        private static void InputFileHelper(string xPath,string filePath)
+        {
+            Browser.Driver.FindElement(By.XPath(xPath)).SendKeys(filePath);
+        }
+
+        private static void HiddenInputFileHelper(string xPath,string filePath) 
+        {
+            var js = (IJavaScriptExecutor)Browser.Driver;            
+            js.ExecuteScript(string.Format("document.getElementById(\"{0}\").style.visibility = \"visible\";", "champPhoto"));           
+            InputFileHelper(xPath, filePath);
+            Browser.WebDriver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(100));
+        }
+
+        private static void TableCellLinkHelper(string xPath, int lineNumber = 1)
+        {
+            Browser.Driver.FindElement(By.XPath(string.Format(xPath, lineNumber))).Click();
+        }
+
+        private static void FormHelper(string xPath)
+        {
+            Browser.Driver.FindElement(By.XPath(xPath)).Submit();
+        }
         #endregion
 
         #region Actions 
@@ -81,7 +110,17 @@ namespace Fr.eCampusPlus.Engine.Pages
                         InputClearHelper(xPath);
                     }
                     break; 
-                }                    
+                } 
+                case ActionElementType.INPUT_FILE:
+                {
+                    InputFileHelper(xPath, value);
+                    break;
+                }
+                case ActionElementType.TABLE_CELL_LINK:
+                {
+                    TableCellLinkHelper(xPath);
+                    break;
+                }
                 case ActionElementType.CHECKBOX:
                 {
                     CheckboxHelper(xPath);
@@ -97,7 +136,17 @@ namespace Fr.eCampusPlus.Engine.Pages
                 {
                     ButtonHelper(xPath);
                     break;
-                }            
+                } 
+                case ActionElementType.FORM:
+                {
+                    FormHelper(xPath);
+                    break;
+                }
+                case ActionElementType.HIDDEN_INPUT_FILE:
+                {
+                    HiddenInputFileHelper(xPath, value);
+                    break;
+                }
             }
         }
 

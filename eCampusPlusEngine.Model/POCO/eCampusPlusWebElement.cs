@@ -15,6 +15,10 @@ namespace Fr.eCampusPlus.Engine.Model.POCO
 
         public string Accessor { get; set; }
 
-        public string ElementType { get; set; }        
+        public string ElementType { get; set; }  
+      
+        public bool RequireReload { get; set; }
+
+        public eCampusPlusWebElement PreActionField { get; set; }
     }
 }
