@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mon application ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="apple-touch-icon" href="~/Content/proui/img/icon57.png" sizes="57x57" />
+    <link rel="apple-touch-icon" href="~/Content/proui/img/icon72.png" sizes="72x72" />
+    <link rel="apple-touch-icon" href="~/Content/proui/img/icon76.png" sizes="76x76" />
+    <link rel="apple-touch-icon" href="~/Content/proui/img/icon114.png" sizes="114x114" />
+    <link rel="apple-touch-icon" href="~/Content/proui/img/icon120.png" sizes="120x120" />
+    <link rel="apple-touch-icon" href="~/Content/proui/img/icon144.png" sizes="144x144" />
+    <link rel="apple-touch-icon" href="~/Content/proui/img/icon152.png" sizes="152x152" />
+    <link rel="stylesheet" href="~/Content/proui/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/proui/css/plugins.css" />
+    <link rel="stylesheet" href="~/Content/proui/css/main.css" />
+    <link rel="stylesheet" href="~/Content/proui/css/themes.css" />
+    <script src="~/Scripts/proui/js/vendor/modernizr-2.7.1-respond-1.4.2.min.js"></script>
+
+</head>
+<body>
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                
+            </div>
+            <div class="navbar-collapse collapse">
+                
+            </div>
+        </div>
+    </div>*@
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

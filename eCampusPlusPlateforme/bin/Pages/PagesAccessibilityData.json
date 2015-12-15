@@ -1,0 +1,605 @@
+﻿{
+    "VertionNumber": "0.0.1",
+    "Plateforme": [
+        {
+            "PlateformeId": "FR",
+            "Name": "FRANCE",
+            "Language": "Fr-fr",
+            "Title": "Campus France",
+            "Pages": [
+                {
+                    "PageId": "RGTR",
+                    "Name": "Registration",
+                    "Fields": [
+                        {
+                            "Name": "Email",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT",
+                            "Accessor": "//*[@id=\"identifiants\"]/div/div[2]/div[1]/div[1]/div[3]/input"
+                        },
+                        {
+                            "Name": "EmailConfirmation",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT",
+                            "Accessor": "//*[@id=\"identifiants\"]/div/div[2]/div[1]/div[2]/div[3]/input"
+                        },
+                        {
+                            "Name": "LastName",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT",
+                            "Accessor": "//*[@id=\"etatCivil\"]/div/div[1]/div[2]/input"
+
+                        },
+                        {
+                            "Name": "FirstName",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT",
+                            "Accessor": "//*[@id=\"etatCivil\"]/div/div[3]/div[2]/input"
+                        },
+                        {
+                            "Name": "Sex",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DROPDOWNLIST",
+                            "Accessor": "//*[@id=\"etatCivil\"]/div/div[4]/div[2]/select"
+                        },
+                        {
+                            "Name": "Birthday",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT",
+                            "Accessor": "//*[@id=\"etatCivil\"]/div/div[5]/div[2]/input"
+                        },
+                        {
+                            "Name": "Nativecountry",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DROPDOWNLIST",
+                            "Accessor": "//*[@id=\"etatCivil\"]/div/div[6]/div[2]/select"
+                        },
+                        {
+                            "Name": "BirthPlace",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT",
+                            "Accessor": "//*[@id=\"etatCivil\"]/div/div[7]/div[2]/input"
+                        },
+                        {
+                            "Name": "Nationality",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DROPDOWNLIST",
+                            "Accessor": "//*[@id=\"etatCivil\"]/div/div[8]/div[2]/select"
+                        },
+                        {
+                            "Name": "TypeOfId",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DROPDOWNLIST",
+                            "Accessor": "//*[@id=\"pieceId\"]/div/div[1]/div[2]/select"
+                        },
+                        {
+                            "Name": "IdValidity",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT",
+                            "Accessor": "//*[@id=\"pieceId\"]/div/div[2]/div[3]/input"
+                        },
+                        {
+                            "Name": "IdNumber",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT",
+                            "Accessor": "//*[@id=\"pieceId\"]/div/div[3]/div[2]/input"
+                        },
+                        {
+                            "Name": "IdIssuerCountry",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DROPDOWNLIST",
+                            "Accessor": "//*[@id=\"pieceId\"]/div/div[4]/div[2]/select"
+                        },
+                        {
+                            "Name": "RegistrationAction",
+                            "AccessorType": "XPATH",
+                            "ElementType": "BUTTON",
+                            "Accessor": "//*[@id=\"creerEtudiantButton\"]"
+                        }
+                    ]
+                },
+                {
+                    "PageId": "ACNT-LGN",
+                    "Name": "Account login",
+                    "Fields": [
+                        {
+                            "Name": "Email",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT",
+                            "Accessor": "//*[@id=\"loginInput\"]"
+                        },
+                        {
+                            "Name": "Password",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT",
+                            "Accessor": "//*[@id=\"mdpInput\"]"
+                        },
+                        {
+                            "Name": "ActionConnect",
+                            "AccessorType": "XPATH",
+                            "ElementType": "BUTTON",
+                            "Accessor": "//*[@id=\"connexion\"]/div/div/form/input"
+                        }
+                    ]
+                },
+                {
+                    "PageId": "ACNT-CONF",
+                    "Name": "Account confirmation",
+                    "Fields": [
+                        {
+                            "Name": "Email",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT",
+                            "Accessor": "//*[@id=\"login\"]"
+                        },
+                        {
+                            "Name": "Password",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT",
+                            "Accessor": "//*[@id=\"password\"]"
+                        },
+                        {
+                            "Name": "PasswordConfirmation",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT",
+                            "Accessor": "//*[@id=\"passwordConfirm\"]"
+                        },
+                        {
+                            "Name": "ActionConfirm",
+                            "AccessorType": "XPATH",
+                            "ElementType": "BUTTON",
+                            "Accessor": "//*[@id=\"confirmerCreationUtilisateurButton\"]"
+                        }
+                    ]
+                },
+                {
+                    "PageId": "ACNT-NAV",
+                    "Name": "Account navigation menu",
+                    "Fields": [
+                        {
+                            "Name": "Candidate",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"menu.candidature\"]/a"
+                        },
+                        {
+                            "Name": "Accepted",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"menu.preconsulaire\"]/a"
+                        },
+                        {
+                            "Name": "Messaging",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"menu.mamessagerie\"]/a"
+                        },
+                        {
+                            "Name": "Account",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"menu.moncompte\"]/a"
+                        }
+                    ]
+                },
+                {
+                    "PageId": "ACNT-CAND-NAV",
+                    "Name": "Account candidate navigation menu",
+                    "Fields": [
+                        {
+                            "Name": "StudentFile",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"linkParcours\"]"
+                        },
+                        {
+                            "Name": "StudentInfo",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"container\"]/div/div/div/div/div[1]/div[2]/div/div/div[2]/h3/a"
+                        },
+                        {
+                            "Name": "TrainingCard",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"container\"]/div/div/div/div/div[1]/div[2]/div/div/div[3]/h3/a"
+                        },
+                        {
+                            "Name": "FileSubmitionCEF",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"container\"]/div/div/div/div/div[1]/div[2]/div/div/div[4]/h3/a"
+                        },
+                        {
+                            "Name": "VerifCEF",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"linkVerifCEF\"]"
+                        },
+                        {
+                            "Name": "UniversityStudyRecord",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"linkCompetence\"]"
+                        }
+                    ]
+                },
+                {
+                    "PageId": "ACNT-CAND-STDNT-INFO",
+                    "Name": "Account candidate student info",
+                    "Fields": [
+                        {
+                            "Name": "Candidate",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"menu.candidature\"]/a"
+                        },
+                        {
+                            "Name": "StudentFileAccess",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"accordeon\"]/div[1]/div[2]/div/div/div[2]/h3/a"
+                        },
+                        {
+                            "Name": "StudentPersonalInfo",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"linkParcours\"]"
+                        },
+                        {
+                            "Name": "CampusFranceId",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DIV",
+                            "Accessor": "//*[@id=\"uNumCompte\"]"
+                        },
+
+                        {
+                            "Name": "CandidatePhoto",
+                            "AccessorType": "XPATH",
+                            "ElementType": "HIDDEN_INPUT_FILE",
+                            "Accessor": "//*[@id=\"champPhoto\"]",
+                            "RequireReload": true,
+                            "PreActionField": [
+
+                                {
+                                    "Name": "StudentPersonalInfo",
+                                    "AccessorType": "XPATH",
+                                    "ElementType": "LINK",
+                                    "Accessor": "//*[@id=\"linkParcours\"]"
+                                }
+                            ]
+                        },
+                        {
+                            "Name": "ContactEdition",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"lienModificationCoordonnees\"]/a"
+                        },
+                        {
+                            "Name": "ContactFormAddress",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT",
+                            "Accessor": "//*[@id=\"compteEtudiant.coordonnees.adressePostale\"]"
+                        },
+                        {
+                            "Name": "ContactFormPostal",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT",
+                            "Accessor": "//*[@id=\"compteEtudiant.coordonnees.codePostal\"]"
+                        },
+                        {
+                            "Name": "ContactFormArea",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DROPDOWNLIST",
+                            "Accessor": "//*[@id=\"compteEtudiant.coordonnees.regionAdresse.id\"]"
+                        },
+                        {
+                            "Name": "ContactFormCity",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DROPDOWNLIST",
+                            "Accessor": "//*[@id=\"compteEtudiant.coordonnees.villeAdresse.id\"]"
+                        },
+                        {
+                            "Name": "ContactFormNumberPrefix",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT",
+                            "Accessor": "//*[@id=\"validationModifierCoordonnees_compteEtudiant_coordonnees_indicatifPortable\"]"
+                        },
+                        {
+                            "Name": "ContactFormNumber",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT",
+                            "Accessor": "//*[@id=\"validationModifierCoordonnees_compteEtudiant_coordonnees_telPortable\"]"
+                        },
+                        {
+                            "Name": "ContactFormSubmit",
+                            "AccessorType": "XPATH",
+                            "ElementType": "BUTTON",
+                            "Accessor": "//*[@id=\"validationModifierCoordonnees\"]/div/div[3]/span[1]/span/button",
+                            "RequireReload": true,
+                            "PreActionField": [
+
+                                {
+                                    "Name": "StudentPersonalInfo",
+                                    "AccessorType": "XPATH",
+                                    "ElementType": "LINK",
+                                    "Accessor": "//*[@id=\"linkParcours\"]"
+                                }
+                            ]
+                        },
+                        {
+                            "Name": "IdJustificatoryEdition",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"justificatifEtatCivilAction\"]"
+                        },
+                        {
+                            "Name": "IdJustificatoryUploader", //300 KO
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT_FILE",
+                            "Accessor": "//*[@id=\"justificatifs\"]/div[4]/div/form/div[3]/input"
+                        },
+                        {
+                            "Name": "IdJustificatoryUploaderError",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DIV",
+                            "Accessor": "//*[@id=\"justificatifs\"]/div[4]/div/div[1]/div/div"
+                        },
+                        {
+                            "Name": "IdJustificatoryUploadedFileRemoval",
+                            "AccessorType": "XPATH",
+                            "ElementType": "TABLE_CELL_LINK",
+                            "Accessor": "//*[@id=\"tableauJustificatif\"]/tbody/tr[{0}]/td[5]/form/input[2]" //Nhile {0} is the line number. Be default 1.
+                        },
+                        {
+                            "Name": "IdJustificatoryUploadedFileRemovalConfOK",
+                            "AccessorType": "XPATH",
+                            "ElementType": "BUTTON",
+                            "Accessor": "//*[@id=\"jsoverlay-c-19\"]/div[2]/button[1]"
+                        },
+                        {
+                            "Name": "IdJustificatoryUploadedFileRemovalConfKO",
+                            "AccessorType": "XPATH",
+                            "ElementType": "BUTTON",
+                            "Accessor": "//*[@id=\"jsoverlay-c-19\"]/div[2]/button[2]"
+                        },
+                        {
+                            "Name": "IdJustificatoryEditionDoneAction",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"cancelButton\"]",
+                            "RequireReload": true,
+                            "PreActionField": [
+
+                                {
+                                    "Name": "StudentPersonalInfo",
+                                    "AccessorType": "XPATH",
+                                    "ElementType": "LINK",
+                                    "Accessor": "//*[@id=\"linkParcours\"]"
+                                }
+                            ]
+                        },
+                        {
+                            "Name": "ParticularCandidateEdition",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"modifierStatutParticulierUrl\"]"
+                        },
+                        {
+                            "Name": "ParticularCandidateBourse",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DROPDOWNLIST",
+                            "Accessor": "//*[@id=\"statutParticulier.statutBourse.id\"]"
+                        },
+                        {
+                            "Name": "ParticularCandidateOtherCase",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DROPDOWNLIST",
+                            "Accessor": "//*[@id=\"statutParticulier.statutAutre.id\"]"
+                        },                         
+                        {
+                            "Name": "ParticularCandidateNo",
+                            "AccessorType": "XPATH",
+                            "ElementType": "CHECKBOX",
+                            "Accessor": "//*[@id=\"aucunStatut\"]"
+                        },    
+                        {
+                            "Name": "ParticularCandidateEditionSave",
+                            "AccessorType": "XPATH",
+                            "ElementType": "BUTTON",
+                            "Accessor": "//*[@id=\"validationModifierStatutParticulier\"]/div/div[6]/span[1]/span/button"
+                        }
+
+                    ]
+                },
+                {
+                    "PageId": "ACNT-CAND-STDNT-SKILLS",
+                    "Name": "Account candidate student Skills",
+                    "Fields": [
+                        
+                        {
+                            "Name": "StudentSkills",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"linkCompetence\"]"
+                        },
+                        {
+                            "Name": "StudentSkillsType",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DROPDOWNLIST",
+                            "Accessor": "//*[@id=\"idTypeActiviteChoisi\"]"
+                        },
+                        {
+                            "Name": "StudentSkillsTypeAdd",
+                            "AccessorType": "XPATH",
+                            "ElementType": "BUTTON",
+                            "Accessor": "//*[@id=\"ajoutActiviteScolaireAction\"]"
+                        },
+                        {
+
+                            "Name": "StudentSkillsTypeSetYear",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DROPDOWNLIST",
+                            "Accessor": "//*[@id=\"anneeScolaire\"]"
+                        },
+                        {
+
+                            "Name": "StudentSkillsTypeSetCountry",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DROPDOWNLIST",
+                            "Accessor": "//*[@id=\"activiteScolaire.pays.id\"]"
+                        },
+                        {
+
+                            "Name": "StudentSkillsTypeSetRegion",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DROPDOWNLIST",
+                            "Accessor": "//*[@id=\"activiteScolaire.regionEtrangere.id\"]"
+                        },
+                        {
+
+                            "Name": "StudentSkillsTypeSetCity",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DROPDOWNLIST",
+                            "Accessor": "//*[@id=\"activiteScolaire.villeEtrangere.id\"]"
+                        },
+                        {
+
+                            "Name": "StudentSkillsTypeSetSchool",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DROPDOWNLIST",
+                            "Accessor": "//*[@id=\"activiteScolaire.etablissementLocal.id\"]"
+                        },
+                        {
+
+                            "Name": "StudentSkillsTypeSetDiplome",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DROPDOWNLIST",
+                            "Accessor": "//*[@id=\"activiteScolaire.typeBacCef.id\"]"
+                        },
+                        {
+
+                            "Name": "StudentSkillsTypeSetScore",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT",
+                            "Accessor": "//*[@id=\"moyenne\"]"
+                        },
+                        {
+
+                            "Name": "StudentSkillsTypeSetLevel",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DROPDOWNLIST",
+                            "Accessor": "//*[@id=\"activiteScolaire.mention.id\"]"
+                        },
+                        {
+                            "Name": "StudentSkillsTypeSubmit",
+                            "AccessorType": "XPATH",
+                            "ElementType": "BUTTON",
+                            "Accessor": "//*[@id=\"validerBac\"]/div[2]/span[1]/span/button"
+                        },
+                        {
+                            "Name": "StudentSkillsJustificatory",
+                            "AccessorType": "XPATH",
+                            "ElementType": "TABLE_CELL_LINK",
+                            "Accessor": "//*[@id=\"justificatifActionAS{0}\"]"
+                        },
+                        {
+                            "Name": "StudentSkillsJustificatoryUplod",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT_FILE",
+                            "Accessor": "//*[@id=\"justificatifs\"]/div[4]/div/form/div[3]/input"
+                        },
+                        {
+                            "Name": "StudentSkillsJustificatorySubmit",
+                            "AccessorType": "XPATH",
+                            "ElementType": "BUTTON",
+                            "Accessor": "//*[@id=\"cancelButton\"]",
+                            "RequireReload": true,
+                            "PreActionField": [
+
+                                {
+                                    "Name": "StudentSkills",
+                                    "AccessorType": "XPATH",
+                                    "ElementType": "LINK",
+                                    "Accessor": "//*[@id=\"linkCompetence\"]"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "PageId": "ACNT-CAND-STDNT-LANGUA",
+                    "Name": "Account candidate student Languages",
+                    "Fields": [
+                        
+                        {
+                            "Name": "StudentLanguages",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"linkCompetence\"]"
+                        },
+                        {
+                            "Name": "StudentLanguagesLevelFrenchLink",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"modifNiveauFrAction\"]"
+                        },
+                        {
+                            "Name": "StudentLanguagesLevelFrenchScolarRef",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DROPDOWNLIST",
+                            "Accessor": "//*[@id=\"niveauFrancais.scolariteFrRef\"]"
+                        },
+                        {
+                            "Name": "StudentLanguagesLevelFrenchStudyRef",
+                            "AccessorType": "XPATH",
+                            "ElementType": "DROPDOWNLIST",
+                            "Accessor": "//*[@id=\"niveauFrancais.etudeFrRef\"]"
+                        },
+                        {
+                            "Name": "StudentLanguagesLevelFrenchSubmit",
+                            "AccessorType": "XPATH",
+                            "ElementType": "BUTTON",
+                            "Accessor": "//*[@id=\"validerNiveauFrancais\"]/div[2]/span[1]/span/button",
+                            "RequireReload": true,
+                            "PreActionField": [
+
+                                {
+                                    "Name": "StudentLanguages",
+                                    "AccessorType": "XPATH",
+                                    "ElementType": "LINK",
+                                    "Accessor": "//*[@id=\"accordeon\"]/div[3]/div[1]/a[1]"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "PageId": "ACNT-CAND-STDNT-CHOSE-SCHOOL",
+                    "Name": "Account candidate choix de formations",
+                    "Fields": [
+                        {
+                            "Name": "StudentSchoolChoiceAdd",
+                            "AccessorType": "XPATH",
+                            "ElementType": "BUTTON",
+                            "Accessor": "//*[@id=\"btnAjouterForm\"]/span/span/a"
+                        },
+                        {
+                            "Name": "StudentSchoolChoiceSearch",
+                            "AccessorType": "XPATH",
+                            "ElementType": "INPUT",
+                            "Accessor": "//*[@id=\"motscles\"]"
+                        },
+                        {
+                            "Name": "StudentSchoolChoiceSearchAction",
+                            "AccessorType": "XPATH",
+                            "ElementType": "BUTTON",
+                            "Accessor": "//*[@id=\"rechercher\"]"
+                        }
+                    ]
+                }
+
+            ]
+        }
+    ]
+}
