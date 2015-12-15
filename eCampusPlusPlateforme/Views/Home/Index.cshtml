@@ -181,7 +181,7 @@
     function eCampusAccountCreation() {
         $('#first').hide();
         $('#second').show();
-        setTimeout(CampusAccountCreation, 5000);
+        CampusAccountCreation();
     }
 
     function CampusAccountCreation() {
@@ -219,7 +219,7 @@
             }
         }).done(function () {
             $('#fourth').hide();
-            $('#fifth').hide();
+            $('#fifth').show();
         });
     }
 </script>
