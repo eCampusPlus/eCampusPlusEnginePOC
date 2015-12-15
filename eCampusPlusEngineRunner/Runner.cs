@@ -10,7 +10,7 @@ using Newtonsoft.Json.Converters;
 
 namespace Fr.eCampusPlus.Engine.Runner
 {
-    public static class TestDataReader
+    public static class Runner
     {
         public static void RunTest(int stepInProcess, string generatedUrl = "")
         {
@@ -18,14 +18,14 @@ namespace Fr.eCampusPlus.Engine.Runner
             JsonSerializer serializer = new JsonSerializer();
             serializer.Converters.Add(new JavaScriptDateTimeConverter());
             serializer.NullValueHandling = NullValueHandling.Ignore;
-
-            using (StreamReader sr = new StreamReader(@"E:\ETIS\Workspace\RepoGit\eCampusPlus\eCampusPlusPlatformePOC\eCampusPlusPlatformePOC\Scripts\eCampusPlusRunner\eCampusPlusTestData\eCampusPlusTestData.json"))
+                       
+            using (StreamReader sr = new StreamReader(@"eCampusPlusTestData\eCampusPlusTestData.json"))
             {
                 eCampusPlusUser = serializer.Deserialize(sr, eCampusPlusUser.GetType()) as eCampusPlusUser;
             }
             
             var eCampusPlusConfig = new eCampusPlusConfiguration();
-            using (StreamReader sr = new StreamReader(@"E:\ETIS\Workspace\RepoGit\eCampusPlus\eCampusPlusPlatformePOC\eCampusPlusPlatformePOC\Scripts\eCampusPlusRunner\eCampusPlusEngineData\eCampusPlusEngineData.json"))
+            using (StreamReader sr = new StreamReader(@"eCampusPlusEngineData\eCampusPlusEngineData.json"))
             {
                 eCampusPlusConfig = serializer.Deserialize(sr, eCampusPlusConfig.GetType()) as eCampusPlusConfiguration;
             }
