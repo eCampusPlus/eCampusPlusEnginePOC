@@ -1,0 +1,52 @@
+﻿{
+    "VersionNumber": "0.0.1",
+    "Plateforme": [
+        {
+            "PlateformeId": "FR",
+            "Name": "FRANCE",
+            "Language": "Fr-fr",
+            "Targets": [
+                {
+                    "TargetId": "MA",
+                    "Name": "MOROCCO",
+                    "Version": "0.0.1",
+                    "Language": "Fr-fr",
+                    "Title": "Campus France Maroc",
+                    "Accesses": [
+                        {
+                            "AccesseId": "RGTR",
+                            "Name": "Registration",
+                            "Url": "https://pastel.diplomatie.gouv.fr/etudesenfrance/dyn/public/etudiant/ET_CPT/creerCompteChoisirCef.html?ecf=MA&locale=fr_MA&sctxid=1-bcd9561f30"
+                        },
+                        {
+                            "AccesseId": "ACNT-LGN",
+                            "Name": "Account login",
+                            "Url": "https://pastel.diplomatie.gouv.fr/etudesenfrance/dyn/public/login.html?ecf=MA&locale=fr_MA"
+                        }
+                    ]
+
+                },
+                {
+                    "TargetId": "TN",
+                    "Name": "TUNISIA",
+                    "Version": "0.0.1",
+                    "Language": "Fr-fr",
+                    "Title": "Campus France Tunisie",
+                    "Accesses": [
+                        {
+                            "AccesseId": "RGTR",
+                            "Name": "Registration",
+                            "URL": "https://pastel.diplomatie.gouv.fr/etudesenfrance/dyn/public/etudiant/ET_CPT/creerCompteChoisirCef.html?ecf=TN&locale=fr_TN&sctxid=1-836f23d426"
+                        },
+                        {
+                            "AccesseId": "ACNT-LGN",
+                            "Name": "Account login",
+                            "URL": "https://pastel.diplomatie.gouv.fr/etudesenfrance/dyn/public/login.html?ecf=TN&locale=fr_TN"
+                        }
+                    ]
+
+                }
+            ]
+        }
+    ]
+}

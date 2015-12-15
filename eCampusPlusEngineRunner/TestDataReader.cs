@@ -12,24 +12,20 @@ namespace Fr.eCampusPlus.Engine.Runner
 {
     public static class TestDataReader
     {
-        public static void RunTest()
+        public static void RunTest(int stepInProcess, string generatedUrl = "")
         {
             var eCampusPlusUser = new eCampusPlusUser();
             JsonSerializer serializer = new JsonSerializer();
             serializer.Converters.Add(new JavaScriptDateTimeConverter());
             serializer.NullValueHandling = NullValueHandling.Ignore;
 
-            
-
-            //TEST DATA
-            //USER DATA
-            using (StreamReader sr = new StreamReader(@"eCampusPlusTestData\eCampusPlusTestData.json"))
+            using (StreamReader sr = new StreamReader(@"E:\ETIS\Workspace\RepoGit\eCampusPlus\eCampusPlusPlatformePOC\eCampusPlusPlatformePOC\Scripts\eCampusPlusRunner\eCampusPlusTestData\eCampusPlusTestData.json"))
             {
                 eCampusPlusUser = serializer.Deserialize(sr, eCampusPlusUser.GetType()) as eCampusPlusUser;
             }
-            //CAMPUS DATA
+            
             var eCampusPlusConfig = new eCampusPlusConfiguration();
-            using (StreamReader sr = new StreamReader(@"eCampusPlusEngineData\eCampusPlusEngineData.json"))
+            using (StreamReader sr = new StreamReader(@"E:\ETIS\Workspace\RepoGit\eCampusPlus\eCampusPlusPlatformePOC\eCampusPlusPlatformePOC\Scripts\eCampusPlusRunner\eCampusPlusEngineData\eCampusPlusEngineData.json"))
             {
                 eCampusPlusConfig = serializer.Deserialize(sr, eCampusPlusConfig.GetType()) as eCampusPlusConfiguration;
             }
@@ -39,44 +35,54 @@ namespace Fr.eCampusPlus.Engine.Runner
 
             string plateformeId = "FR";
             string targetId = "MA";
+            string pageId = string.Empty;
+            string url = string.Empty;
+            Page page = null;
 
-            //REGISTRATION
-            string pageId = "RGTR";
-            string url =
-                eCampusPlusConfig.Plateforme.FirstOrDefault(pt => pt.PlateformeId.Equals(plateformeId))
-                    .Targets.FirstOrDefault(t => t.TargetId.Equals(targetId))
-                    .Accesses.FirstOrDefault(a => a.AccesseId.Equals(pageId))
-                    .Url;            
-            var page = new Page(plateformeId, pageId, url);
-            //ProcessingAction(page, eCampusPlusUser, eCampusPlusConfig);
-            
-            //LOGIN
-            pageId = "ACNT-LGN";
-            url =
-                eCampusPlusConfig.Plateforme.FirstOrDefault(pt => pt.PlateformeId.Equals(plateformeId))
-                    .Targets.FirstOrDefault(t => t.TargetId.Equals(targetId))
-                    .Accesses.FirstOrDefault(a => a.AccesseId.Equals(pageId))
-                    .Url;
-            page = new Page(plateformeId, pageId, url);
-            ProcessingAction(page, eCampusPlusUser, eCampusPlusConfig);
+            switch (stepInProcess)
+            {
+                case 1:
+                    //REGISTRATION
+                    pageId = "RGTR";
+                    url = eCampusPlusConfig.Plateforme.FirstOrDefault(pt => pt.PlateformeId.Equals(plateformeId))
+                            .Targets.FirstOrDefault(t => t.TargetId.Equals(targetId))
+                            .Accesses.FirstOrDefault(a => a.AccesseId.Equals(pageId))
+                            .Url;
+                    page = new Page(plateformeId, pageId, url);
+                    ProcessingAction(page, eCampusPlusUser, eCampusPlusConfig);
+                    break;
+                case 2:
+                    //Confirmation
+                    pageId = "ACNT-CONF";
+                    url = generatedUrl; //"http://pastel.diplomatie.gouv.fr/etudesenfrance/dyn/public/confirmerCompte.html?ticket=083d2bfa-8129-4d2a-b932-3ebbe4a070b7";
+                    page = new Page(plateformeId, pageId, url);
+                    ProcessingAction(page, eCampusPlusUser, eCampusPlusConfig);
+                    break;
+                case 3:
+                    //LOGIN
+                    pageId = "ACNT-LGN";
+                    url =
+                        eCampusPlusConfig.Plateforme.FirstOrDefault(pt => pt.PlateformeId.Equals(plateformeId))
+                            .Targets.FirstOrDefault(t => t.TargetId.Equals(targetId))
+                            .Accesses.FirstOrDefault(a => a.AccesseId.Equals(pageId))
+                            .Url;
+                    page = new Page(plateformeId, pageId, url);
+                    ProcessingAction(page, eCampusPlusUser, eCampusPlusConfig);
 
-            //Candidate
-            //pageId = "ACNT-NAV";
-            //page = new Page(plateformeId, pageId, string.Empty,false);
-            //Process some actions
-            //pageId = "ACNT-CAND-NAV";
-            //page = new Page(plateformeId, pageId, string.Empty, false);
-            //Process some actions
-            //pageId = "ACNT-CAND-STDNT-INFO";
-            //page = new Page(plateformeId, pageId, string.Empty, false);
-            //pageId = "ACNT-CAND-STDNT-SKILLS";
-            //page = new Page(plateformeId, pageId, string.Empty, false);
-            //pageId = "ACNT-CAND-STDNT-LANGUA";
-            //page = new Page(plateformeId, pageId, string.Empty, false);
+                    //SET FILE DATA
+                    pageId = "ACNT-CAND-STDNT-INFO";
+                    page = new Page(plateformeId, pageId, string.Empty, false);
+                    ProcessingAction(page, eCampusPlusUser, eCampusPlusConfig);
 
-            pageId = "ACNT-CAND-STDNT-CHOSE-SCHOOL";
-            page = new Page(plateformeId, pageId, string.Empty, false);
-            ProcessingAction(page, eCampusPlusUser, eCampusPlusConfig);
+                    pageId = "ACNT-CAND-STDNT-SKILLS";
+                    page = new Page(plateformeId, pageId, string.Empty, false);
+                    ProcessingAction(page, eCampusPlusUser, eCampusPlusConfig);
+
+                    pageId = "ACNT-CAND-STDNT-LANGUA";
+                    page = new Page(plateformeId, pageId, string.Empty, false);
+                    ProcessingAction(page, eCampusPlusUser, eCampusPlusConfig);
+                    break;
+            }
 
             //END
             Browser.WebDriver.Quit();
@@ -97,7 +103,11 @@ namespace Fr.eCampusPlus.Engine.Runner
                     if (e.RequireReload)
                     {
                         Browser.WebDriver.Navigate().Refresh();
-                        PagesHelper.PerformAction((PagesHelper.ActionElementType)Enum.Parse(typeof(PagesHelper.ActionElementType), e.PreActionField.ElementType, true), e.PreActionField.Accessor);
+                        e.PreActionField.ForEach(pre =>
+                        {
+                            PagesHelper.PerformAction((PagesHelper.ActionElementType)Enum.Parse(typeof(PagesHelper.ActionElementType), pre.ElementType, true), pre.Accessor);
+                        });
+                        
                     }
                 }
             });  

@@ -147,7 +147,7 @@
                         {
                             "Name": "ActionConfirm",
                             "AccessorType": "XPATH",
-                            "ElementType": "INPUT",
+                            "ElementType": "BUTTON",
                             "Accessor": "//*[@id=\"confirmerCreationUtilisateurButton\"]"
                         }
                     ]
@@ -229,6 +229,18 @@
                     "Name": "Account candidate student info",
                     "Fields": [
                         {
+                            "Name": "Candidate",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"menu.candidature\"]/a"
+                        },
+                        {
+                            "Name": "StudentFileAccess",
+                            "AccessorType": "XPATH",
+                            "ElementType": "LINK",
+                            "Accessor": "//*[@id=\"accordeon\"]/div[1]/div[2]/div/div/div[2]/h3/a"
+                        },
+                        {
                             "Name": "StudentPersonalInfo",
                             "AccessorType": "XPATH",
                             "ElementType": "LINK",
@@ -247,12 +259,15 @@
                             "ElementType": "HIDDEN_INPUT_FILE",
                             "Accessor": "//*[@id=\"champPhoto\"]",
                             "RequireReload": true,
-                            "PreActionField": {
-                                "Name": "StudentPersonalInfo",
-                                "AccessorType": "XPATH",
-                                "ElementType": "LINK",
-                                "Accessor": "//*[@id=\"linkParcours\"]"
-                            }
+                            "PreActionField": [
+
+                                {
+                                    "Name": "StudentPersonalInfo",
+                                    "AccessorType": "XPATH",
+                                    "ElementType": "LINK",
+                                    "Accessor": "//*[@id=\"linkParcours\"]"
+                                }
+                            ]
                         },
                         {
                             "Name": "ContactEdition",
@@ -302,12 +317,15 @@
                             "ElementType": "BUTTON",
                             "Accessor": "//*[@id=\"validationModifierCoordonnees\"]/div/div[3]/span[1]/span/button",
                             "RequireReload": true,
-                            "PreActionField": {
-                                "Name": "StudentPersonalInfo",
-                                "AccessorType": "XPATH",
-                                "ElementType": "LINK",
-                                "Accessor": "//*[@id=\"linkParcours\"]"
-                            }
+                            "PreActionField": [
+
+                                {
+                                    "Name": "StudentPersonalInfo",
+                                    "AccessorType": "XPATH",
+                                    "ElementType": "LINK",
+                                    "Accessor": "//*[@id=\"linkParcours\"]"
+                                }
+                            ]
                         },
                         {
                             "Name": "IdJustificatoryEdition",
@@ -351,12 +369,15 @@
                             "ElementType": "LINK",
                             "Accessor": "//*[@id=\"cancelButton\"]",
                             "RequireReload": true,
-                            "PreActionField": {
-                                "Name": "StudentPersonalInfo",
-                                "AccessorType": "XPATH",
-                                "ElementType": "LINK",
-                                "Accessor": "//*[@id=\"linkParcours\"]"
-                            }
+                            "PreActionField": [
+
+                                {
+                                    "Name": "StudentPersonalInfo",
+                                    "AccessorType": "XPATH",
+                                    "ElementType": "LINK",
+                                    "Accessor": "//*[@id=\"linkParcours\"]"
+                                }
+                            ]
                         },
                         {
                             "Name": "ParticularCandidateEdition",
@@ -365,23 +386,23 @@
                             "Accessor": "//*[@id=\"modifierStatutParticulierUrl\"]"
                         },
                         {
-                            "Name": "ParticularCandidateNo",
-                            "AccessorType": "XPATH",
-                            "ElementType": "CHECKBOX",
-                            "Accessor": "//*[@id=\"aucunStatut\"]"
-                        },
-                        /*{
                             "Name": "ParticularCandidateBourse",
                             "AccessorType": "XPATH",
                             "ElementType": "DROPDOWNLIST",
                             "Accessor": "//*[@id=\"statutParticulier.statutBourse.id\"]"
-                        },                        
+                        },
                         {
                             "Name": "ParticularCandidateOtherCase",
                             "AccessorType": "XPATH",
                             "ElementType": "DROPDOWNLIST",
                             "Accessor": "//*[@id=\"statutParticulier.statutAutre.id\"]"
-                        },     */
+                        },                         
+                        {
+                            "Name": "ParticularCandidateNo",
+                            "AccessorType": "XPATH",
+                            "ElementType": "CHECKBOX",
+                            "Accessor": "//*[@id=\"aucunStatut\"]"
+                        },    
                         {
                             "Name": "ParticularCandidateEditionSave",
                             "AccessorType": "XPATH",
@@ -395,6 +416,7 @@
                     "PageId": "ACNT-CAND-STDNT-SKILLS",
                     "Name": "Account candidate student Skills",
                     "Fields": [
+                        
                         {
                             "Name": "StudentSkills",
                             "AccessorType": "XPATH",
@@ -493,12 +515,15 @@
                             "ElementType": "BUTTON",
                             "Accessor": "//*[@id=\"cancelButton\"]",
                             "RequireReload": true,
-                            "PreActionField": {
-                                "Name": "StudentSkills",
-                                "AccessorType": "XPATH",
-                                "ElementType": "LINK",
-                                "Accessor": "//*[@id=\"linkCompetence\"]"
-                            }
+                            "PreActionField": [
+
+                                {
+                                    "Name": "StudentSkills",
+                                    "AccessorType": "XPATH",
+                                    "ElementType": "LINK",
+                                    "Accessor": "//*[@id=\"linkCompetence\"]"
+                                }
+                            ]
                         }
                     ]
                 },
@@ -506,6 +531,7 @@
                     "PageId": "ACNT-CAND-STDNT-LANGUA",
                     "Name": "Account candidate student Languages",
                     "Fields": [
+                        
                         {
                             "Name": "StudentLanguages",
                             "AccessorType": "XPATH",
@@ -536,12 +562,15 @@
                             "ElementType": "BUTTON",
                             "Accessor": "//*[@id=\"validerNiveauFrancais\"]/div[2]/span[1]/span/button",
                             "RequireReload": true,
-                            "PreActionField": {
-                                "Name": "StudentLanguages",
-                                "AccessorType": "XPATH",
-                                "ElementType": "LINK",
-                                "Accessor": "//*[@id=\"accordeon\"]/div[3]/div[1]/a[1]"
-                            }
+                            "PreActionField": [
+
+                                {
+                                    "Name": "StudentLanguages",
+                                    "AccessorType": "XPATH",
+                                    "ElementType": "LINK",
+                                    "Accessor": "//*[@id=\"accordeon\"]/div[3]/div[1]/a[1]"
+                                }
+                            ]
                         }
                     ]
                 },

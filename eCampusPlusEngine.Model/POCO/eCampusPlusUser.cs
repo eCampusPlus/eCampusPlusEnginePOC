@@ -38,6 +38,8 @@
 
         public bool ActionConnect { get; set; }
 
+        public bool StudentFileAccess { get; set; }
+
         public bool StudentPersonalInfo { get; set; }        
 
         public string CandidatePhoto { get; set; }        

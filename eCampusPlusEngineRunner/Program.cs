@@ -6,8 +6,18 @@ namespace Fr.eCampusPlus.Engine.Runner
     {
         static void Main(string[] args)
         {
-            TestDataReader.RunTest();
             
+            if (args != null)
+            {
+
+                var step = int.Parse(args[0]);
+                var genUrl = string.Empty;
+                if (args.Length == 2)
+                {
+                    genUrl = args[0];
+                }
+                TestDataReader.RunTest(step,genUrl);
+            }            
         }
     }
 }

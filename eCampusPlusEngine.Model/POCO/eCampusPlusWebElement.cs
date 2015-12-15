@@ -19,6 +19,6 @@ namespace Fr.eCampusPlus.Engine.Model.POCO
       
         public bool RequireReload { get; set; }
 
-        public eCampusPlusWebElement PreActionField { get; set; }
+        public List<eCampusPlusWebElement> PreActionField { get; set; }
     }
 }
