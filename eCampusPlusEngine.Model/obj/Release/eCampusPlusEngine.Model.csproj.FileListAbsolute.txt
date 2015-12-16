@@ -2,3 +2,7 @@ E:\ETIS\Workspace\RepoGit\eCampusPlus\eCampusPlusEnginePOC\eCampusPlusEnginePOC\
 E:\ETIS\Workspace\RepoGit\eCampusPlus\eCampusPlusEnginePOC\eCampusPlusEnginePOC\eCampusPlusEnginePOC\eCampusPlusEngine.Model\bin\Release\eCampusPlusEngine.Model.pdb
 E:\ETIS\Workspace\RepoGit\eCampusPlus\eCampusPlusEnginePOC\eCampusPlusEnginePOC\eCampusPlusEnginePOC\eCampusPlusEngine.Model\obj\Release\eCampusPlusEngine.Model.dll
 E:\ETIS\Workspace\RepoGit\eCampusPlus\eCampusPlusEnginePOC\eCampusPlusEnginePOC\eCampusPlusEnginePOC\eCampusPlusEngine.Model\obj\Release\eCampusPlusEngine.Model.pdb
+C:\Users\aroucadi\Documents\GitHub\eCampusPlusEnginePOC\eCampusPlusEngine.Model\bin\Release\eCampusPlusEngine.Model.dll
+C:\Users\aroucadi\Documents\GitHub\eCampusPlusEnginePOC\eCampusPlusEngine.Model\bin\Release\eCampusPlusEngine.Model.pdb
+C:\Users\aroucadi\Documents\GitHub\eCampusPlusEnginePOC\eCampusPlusEngine.Model\obj\Release\eCampusPlusEngine.Model.dll
+C:\Users\aroucadi\Documents\GitHub\eCampusPlusEnginePOC\eCampusPlusEngine.Model\obj\Release\eCampusPlusEngine.Model.pdb

@@ -3,3 +3,8 @@ E:\ETIS\Workspace\RepoGit\eCampusPlus\eCampusPlusEnginePOC\eCampusPlusEnginePOC\
 E:\ETIS\Workspace\RepoGit\eCampusPlus\eCampusPlusEnginePOC\eCampusPlusEnginePOC\eCampusPlusEnginePOC\eCampusPlusEngine.Model\obj\Debug\eCampusPlusEngine.Model.csprojResolveAssemblyReference.cache
 E:\ETIS\Workspace\RepoGit\eCampusPlus\eCampusPlusEnginePOC\eCampusPlusEnginePOC\eCampusPlusEnginePOC\eCampusPlusEngine.Model\obj\Debug\eCampusPlusEngine.Model.dll
 E:\ETIS\Workspace\RepoGit\eCampusPlus\eCampusPlusEnginePOC\eCampusPlusEnginePOC\eCampusPlusEnginePOC\eCampusPlusEngine.Model\obj\Debug\eCampusPlusEngine.Model.pdb
+C:\Users\aroucadi\Documents\GitHub\eCampusPlusEnginePOC\eCampusPlusEngine.Model\bin\Debug\eCampusPlusEngine.Model.dll
+C:\Users\aroucadi\Documents\GitHub\eCampusPlusEnginePOC\eCampusPlusEngine.Model\bin\Debug\eCampusPlusEngine.Model.pdb
+C:\Users\aroucadi\Documents\GitHub\eCampusPlusEnginePOC\eCampusPlusEngine.Model\obj\Debug\eCampusPlusEngine.Model.csprojResolveAssemblyReference.cache
+C:\Users\aroucadi\Documents\GitHub\eCampusPlusEnginePOC\eCampusPlusEngine.Model\obj\Debug\eCampusPlusEngine.Model.dll
+C:\Users\aroucadi\Documents\GitHub\eCampusPlusEnginePOC\eCampusPlusEngine.Model\obj\Debug\eCampusPlusEngine.Model.pdb

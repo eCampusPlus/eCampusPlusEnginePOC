@@ -2,7 +2,7 @@
 using eCampusPlus.Engine.Configuration.Drivers;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using SeleniumWebdriverHelpers;
+using System.Threading;
 
 namespace Fr.eCampusPlus.Engine.Pages
 {
@@ -80,7 +80,9 @@ namespace Fr.eCampusPlus.Engine.Pages
 
         private static void TableCellLinkHelper(string xPath, int lineNumber = 1)
         {
+            Thread.Sleep(3000);
             Browser.Driver.FindElement(By.XPath(string.Format(xPath, lineNumber))).Click();
+            Thread.Sleep(100);
         }
 
         private static void FormHelper(string xPath)

@@ -46,7 +46,7 @@ namespace Fr.eCampusPlus.Engine.Pages
             serializer.NullValueHandling = NullValueHandling.Ignore;
             eCampusPlusPagesConfiguration config = new eCampusPlusPagesConfiguration();
 
-            using (StreamReader sr = new StreamReader(@"E:\eCampusPlusPOCData\Pages\PagesAccessibilityData.json"))
+            using (StreamReader sr = new StreamReader(@"D:\eCampusPlusPOCData\Pages\PagesAccessibilityData.json"))
             {                
                 config = serializer.Deserialize(sr, config.GetType()) as eCampusPlusPagesConfiguration;
             }

@@ -38,6 +38,8 @@
 
         public bool ActionConnect { get; set; }
 
+        public bool Candidate { get; set; }
+
         public bool StudentFileAccess { get; set; }
 
         public bool StudentPersonalInfo { get; set; }        
@@ -70,9 +72,9 @@
 
         public bool ParticularCandidateNo { get; set; }
 
-        public string ParticularCandidateBourse { get; set; }
+        //public string ParticularCandidateBourse { get; set; }
 
-        public string ParticularCandidateOtherCase { get; set; }        
+        //public string ParticularCandidateOtherCase { get; set; }        
 
         public bool ParticularCandidateEditionSave { get; set; }
 

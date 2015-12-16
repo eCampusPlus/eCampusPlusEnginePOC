@@ -7,6 +7,7 @@ using eCampusPlus.Engine.Configuration.Drivers;
 using Fr.eCampusPlus.Engine.Model.POCO;
 using Fr.eCampusPlus.Engine.Pages;
 using Newtonsoft.Json.Converters;
+using System.Threading;
 
 namespace Fr.eCampusPlus.Engine.Runner
 {
@@ -19,19 +20,19 @@ namespace Fr.eCampusPlus.Engine.Runner
             serializer.Converters.Add(new JavaScriptDateTimeConverter());
             serializer.NullValueHandling = NullValueHandling.Ignore;
 
-            using (StreamReader sr = new StreamReader(@"E:\eCampusPlusPOCData\eCampusPlusTestData\eCampusPlusTestData.json"))
+            using (StreamReader sr = new StreamReader(@"D:\eCampusPlusPOCData\eCampusPlusTestData\eCampusPlusTestData.json"))
             {
                 eCampusPlusUser = serializer.Deserialize(sr, eCampusPlusUser.GetType()) as eCampusPlusUser;
             }
             
             var eCampusPlusConfig = new eCampusPlusConfiguration();
-            using (StreamReader sr = new StreamReader(@"E:\eCampusPlusPOCData\eCampusPlusEngineData\eCampusPlusEngineData.json"))
+            using (StreamReader sr = new StreamReader(@"D:\eCampusPlusPOCData\eCampusPlusEngineData\eCampusPlusEngineData.json"))
             {
                 eCampusPlusConfig = serializer.Deserialize(sr, eCampusPlusConfig.GetType()) as eCampusPlusConfiguration;
             }
 
             //Browser start
-            Browser.SetWebDriver("FIREFOX");
+            //Browser.SetWebDriver("FIREFOX");
 
             string plateformeId = "FR";
             string targetId = "MA";
@@ -49,7 +50,7 @@ namespace Fr.eCampusPlus.Engine.Runner
                             .Accesses.FirstOrDefault(a => a.AccesseId.Equals(pageId))
                             .Url;
                     page = new Page(plateformeId, pageId, url);
-                    ProcessingAction(page, eCampusPlusUser, eCampusPlusConfig);
+                    //ProcessingAction(page, eCampusPlusUser, eCampusPlusConfig);
                     break;
                 case 2:
                     //Confirmation
@@ -86,7 +87,7 @@ namespace Fr.eCampusPlus.Engine.Runner
             }
 
             //END
-            Browser.WebDriver.Quit();
+            //Browser.WebDriver.Quit();
             
         }
 
@@ -101,12 +102,14 @@ namespace Fr.eCampusPlus.Engine.Runner
                 {
                     string value = property .GetValue(eCampusPlusUser).ToString();
                     PagesHelper.PerformAction((PagesHelper.ActionElementType)Enum.Parse(typeof(PagesHelper.ActionElementType), e.ElementType, true), e.Accessor, value);
+                    Thread.Sleep(100);
                     if (e.RequireReload)
                     {
                         Browser.WebDriver.Navigate().Refresh();
                         e.PreActionField.ForEach(pre =>
                         {
                             PagesHelper.PerformAction((PagesHelper.ActionElementType)Enum.Parse(typeof(PagesHelper.ActionElementType), pre.ElementType, true), pre.Accessor);
+                            Thread.Sleep(50);
                         });
                         
                     }
