@@ -1,345 +1,126 @@
 ﻿@{
     ViewBag.Title = "eCampusPlus Plateforme";
 }
-
-
-<div class="col-md-12">
-
-
-    <div class="widget" id="eCampusPlusAccount">
-        <div class="widget-extra themed-background-dark">
-            <h3 class="widget-content-light">
-                <i class="fa fa-pencil"></i><em> Création de votre compte </em><strong>eCampusPlus</strong>
-
-            </h3>
-        </div>
-
-        <div class="widget-extra">
-            <div class="block">
-                <div class="block-title ">
-
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div>
+    <div class="content-header content-header-media">
+        <div class="header-section">
+            <div class="row">
+                <div class="col-md-4 col-lg-6 hidden-xs hidden-sm">
+                    <img src="~/Content/logoecampusplus.png" class="animation-pulseSlow">
+                    <h1> <em><strong>eCampusPlus</strong> en action</em><br></h1>
                 </div>
-                <form class="form-horizontal form-bordered ui-formwizard">
-                    <br />
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="example-password">Mot de passe</label>
-                        <div class="col-md-6">
-                            <input type="password" id="example-password" name="example-password" class="form-control ui-wizard-content" placeholder="Choisissez votre mot de passe">
+                <div class="col-md-8 col-lg-6">
+                    <div class="row text-center">
+                        <div class="col-xs-4 col-sm-3">
+                            <h2 class="animation-hatch">
+                                <strong>?</strong><br>
+                                <small><i class="fa fa-thumbs-o-up"></i> Great</small>
+                            </h2>
+                        </div>
+                        <div class="col-xs-4 col-sm-3">
+                            <h2 class="animation-hatch">
+                                <strong>?</strong><br>
+                                <small><i class="fa fa-heart-o"></i> Likes</small>
+                            </h2>
+                        </div>
+                        <div class="col-xs-4 col-sm-5">
+                            <h2 class="animation-hatch">
+                                <strong>Let's GO!!!!</strong><br>                               
+                                <small><i class="fa fa-arrow-right fa-2x" onclick="javascript:gotoDemo()"></i></small>
+                            </h2>
                         </div>
                     </div>
-                    <div cass="form-group">
-                        <label class="col-md-4 control-label" for="example-password2">Confirmation de mot de passe</label>
-                        <div class="col-md-6">
-                            <input type="password" id="example-password2" name="example-password2" class="form-control ui-wizard-content" placeholder="Comfirmer votre mot de passe">
-                        </div>
-                        <div class="form-group form-actions">
-                            <div class="col-md-8 col-md-offset-4">
-                                <input type="reset" class="btn btn-lg btn-default ui-wizard-content ui-formwizard-button" id="back" value="Réinitialiser" disabled="disabled">
-                                <input type="button" class="btn btn-lg btn-success ui-wizard-content ui-formwizard-button" id="next" value="Valider mon compte" onclick="javascript:gotoReport()">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="widget" id="eCampusPlusServiceChoice" style="display:none">
-
-        <div class="widget-extra themed-background-dark">
-            <h3 class="widget-content-light">
-                <i class="fa fa-pencil"></i><em> Selectionnez votre service </em><strong>eCampusPlus</strong>
-
-            </h3>
-
-        </div>
-        <br />
-        <div class="widget-advanced widget-advanced-alt">
-            <div class="widget-header text-center themed-background col-md-4 col-md-offset-1">
-                <h3 class="widget-content-light text-left pull-left animation-pullDown">
-                    <strong>Rapport d'éligibilité à la fromation en <em>FRANCE</em></strong><br>
-                    <small><em>Service offert</em></small>
-                    <br />
-                    <br />
-                    <i class="fa fa-file-text fa-5x"></i>
-                </h3>
-                <div id="dash-widget-chart" class="chart"></div>
-
-            </div>
-            <div class="widget-header text-center themed-background-spring col-md-4 col-md-offset-1">
-                <h3 class="widget-content-light text-left pull-left animation-pullDown">
-                    <strong>Création du dossier <em>CAMPUS FRANCE</em></strong><br>
-                    <small><em>Service payant</em></small>
-                    <br />
-                    <br />
-                    <i class="gi gi-wallet fa-5x"></i>
-
-                </h3>
-                <div id="dash-widget-chart" class="chart"></div>
-
-            </div>
-
-            <div class="widget-main ">
-                <div class="row text-center">
-                    
                 </div>
             </div>
-            
         </div>
-        <div class="col-xs-12 widget-extra">
-            <form class="form-horizontal form-bordered" action="#" method="POST" onsubmit="return false;">
-                <div class="form-group form-actions">
-
-                    <div class="col-md-4 col-md-offset-1">
-                        <label class="switch switch-primary"><input type="checkbox" checked=""><span></span></label>
-                    </div>
-
-                    <div class="col-md-4 col-md-offset-1">
-                        <label class="switch switch-success"><input type="checkbox" checked="" onclick="javascript: gotoFile()"><span></span></label>
-                    </div>
-                    
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <div class="widget" id="CampusFranceAccount" style="display:none">
-        <div class="widget-extra themed-background-dark">
-            <h3 class="widget-content-light">
-                <i class="fa fa-pencil"></i><em> Création et saisie du dossier</em><strong> Campus FRANCE</strong>
-
-            </h3>
-
-        </div>
-
-        <div class="widget-extra">
-            <div class="block">
-                <div class="block-title ">
-
-                </div>
-                <form class="form-horizontal form-bordered ui-formwizard">
-                    <div id="first" class="step ui-formwizard-content" style="display: block;">
-                        <div class="wizard-steps">
-                            <div class="row">
-                                <div class="col-xs-4 active">
-                                    <span>1. Création</span>
-
-                                </div>
-                                <div class="col-xs-4">
-                                    <span>2. Validation</span>
-
-                                </div>
-                                <div class="col-xs-4">
-                                    <span>3. Saisie</span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-12 text-center">
-                                <i class="fa fa-asterisk fa-spin fa-4x text-success"></i>
-
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <p class="well well-sm">
-                                    Nous procédons à la création de votre compte <strong>Campus FRANCE</strong>
-
-                                </p>
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <div id="second" class="step ui-formwizard-content" style="display: none;">
-                        <div class="wizard-steps">
-                            <div class="row">
-
-                                <div class="col-xs-4 done">
-                                    <span><i class="fa fa-check"></i></span>
-
-                                </div>
-                                <div class="col-xs-4 active">
-                                    <span>2. Validation</span>
-
-                                </div>
-                                <div class="col-xs-4">
-                                    <span>3. Saisie</span>
-
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="example-bio">Lien de confirmation de créationde compte</label>
-                            <div class="col-md-8">
-                                <input type="url" id="lienValidation" name="example-password" class="form-control ui-wizard-content" placeholder="URL de validation reçu par mail de Campus FRANCE">
-
-                            </div>
-                        </div>
-                        <div class="form-group" id="validationLoader" style="display: none">
-                            <div class="col-md-12 text-center">
-                                <i class="fa fa-asterisk fa-spin fa-4x text-success"></i>
-
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <p class="well well-sm">
-                                    Nous procédons à la validation de votre compte <strong>Campus FRANCE</strong>
-
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div id="third" class="step ui-formwizard-content" style="display: none;">
-                        <div class="wizard-steps">
-                            <div class="row">
-                                <div class="col-xs-4 done">
-                                    <span><i class="fa fa-check"></i></span>
-                                </div>
-                                <div class="col-xs-4 done">
-                                    <span><i class="fa fa-check"></i></span>
-
-                                </div>
-
-                                <div class="col-xs-4 active">
-                                    <span>3. Saisie</span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-12 text-center">
-                                <i class="fa fa-asterisk fa-spin fa-4x text-success"></i>
-
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <p class="well well-sm">
-                                    Nous procédons à la saisie de votre dossier <strong>Campus FRANCE</strong>
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div id="fourth" class="step ui-formwizard-content" style="display: none;">
-                        <div class="wizard-steps">
-                            <div class="row">
-
-                                <div class="col-xs-4 done">
-                                    <span><i class="fa fa-check"></i></span>
-
-                                </div>
-                                <div class="col-xs-4 done">
-                                    <span><i class="fa fa-check"></i></span>
-
-                                </div>
-                                <div class="col-xs-4 done">
-                                    <span><i class="fa fa-check"></i></span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-12 text-center">
-                                <i class="fa fa-check-circle fa-5x"></i>
-
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <p class="well well-sm">
-                                    Félicitation, la création et la saisie de votre dossier <strong>Campus FRANCE</strong> est terminée avec succes
-
-                                </p>
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="form-group form-actions">
-                        <div class="col-md-8 col-md-offset-4">
-                            <input type="reset" class="btn btn-lg btn-default ui-wizard-content ui-formwizard-button" id="back" value="Précédent" disabled="disabled">
-                            <input type="button" class="btn btn-lg btn-info ui-wizard-content ui-formwizard-button" id="next" value="Suivant" onclick="javascript:performeAction()">
-
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
+        <img src="~/Content/proui/img/placeholders/headers/dashboard_header.jpg" alt="header image" class="animation-pulseSlow">                
+    </div>  
+    
 </div>
+<div id="eCampusPlusLogo" style="display:none">
+    <br/>
+    <br/>
+    <img src="~/Content/logoecampusplus.png" id="eCampusPlusLogoImg">
+    <img src="~/Content/logoecampusplus.png" id="eCampusPlusLogoImg1" style="display:none">
+    <img src="~/Content/logoecampusplus.png" id="eCampusPlusLogoImg2" style="display:none">
+    <img src="~/Content/logoecampusplus.png" id="eCampusPlusLogoImg3" style="display:none">
+    <img src="~/Content/logoecampusplus.png" id="eCampusPlusLogoImg4" style="display:none">
+    <img src="~/Content/logoecampusplus.png" id="eCampusPlusLogoImg5" style="display:none">
+    
+</div> 
+<script>
+    function gotoDemo() {
 
-<script type="text/javascript">
-    var step = 0;
-
-    function performeAction() {
-        step++;
-        if (step == 1) {
-            CampusAccountCreation();
-        }
-        else if (step == 2) {
-            CampusAccountValidation();
-        }
-        console.log(step);
-    }
-
-
-    function CampusAccountCreation() {
-        $.ajax({
-            url: "CampusAccountCreation",
-            context: document.body
-        }).done(function () {
-            $('#first').hide();
-            $('#second').show();
-
-        });
-    }
-    function CampusAccountValidation() {
-        $('#validationLoader').show();
-        $.ajax({
-            url: "CampusAccountValidation",
-            context: document.body,
-            data: {
-                lienValidation: $("#lienValidation").val()
-            }
-        }).done(function () {
-            $('#validationLoader').hide();
-            $('#second').hide();
-            $('#third').show();
-            CampusAccountSetup();
-        });
-    }
-
-    function CampusAccountSetup() {
-        $.ajax({
-            url: "CampusAccountSetup",
-            context: document.body,
-            data: {
-                lienValidation: $("#lienValidation").val()
-            }
-        }).done(function () {
-            $('#third').hide();
-            $('#fourth').show();
-        });
-    }
-
-    function gotoReport() {
-        $("#eCampusPlusAccount").hide();
-        $("#eCampusPlusServiceChoice").show();
-
-    }
-
-    function gotoFile() {
-        $("#eCampusPlusServiceChoice").hide();
-        $("#CampusFranceAccount").show();
-    }
+        $('#eCampusPlusLogo').fadeIn(1000);
+        setTimeout(function () {
+            $('#eCampusPlusLogoImg1').css({
+                transform: 'rotate(60deg)'
+            });
+            //$('#eCampusPlusLogoImg').fadeOut();
+            $('#eCampusPlusLogoImg1').fadeIn(1000);
+            setTimeout(function () {
+                $('#eCampusPlusLogoImg2').css({
+                    transform: 'rotate(1200deg)'
+                });
+                //$('#eCampusPlusLogoImg1').fadeOut();
+                $('#eCampusPlusLogoImg2').fadeIn(1000);
+                setTimeout(function () {
+                    $('#eCampusPlusLogoImg3').css({
+                        transform: 'rotate(180deg)'
+                    });
+                    //$('#eCampusPlusLogoImg2').fadeOut();
+                    $('#eCampusPlusLogoImg3').fadeIn(1000);
+                    setTimeout(function () {
+                        $('#eCampusPlusLogoImg4').css({
+                            transform: 'rotate(240deg)'
+                        });
+                        //$('#eCampusPlusLogoImg3').fadeOut();
+                        $('#eCampusPlusLogoImg4').fadeIn(1000);
+                        setTimeout(function () {                            
+                            $('#eCampusPlusLogoImg5').css({
+                                transform: 'rotate(300deg)'
+                            });
+                            //$('#eCampusPlusLogoImg4').fadeOut();
+                            $('#eCampusPlusLogoImg5').fadeIn(1000);
+                            setTimeout(function () {
+                                $('#eCampusPlusLogo').fadeOut();
+                                setTimeout(function () {
+                                    window.location.href = "/Content/website/index.html";
+                                }, 700);
+                            }, 100);
+                        }, 100);
+                    }, 100);
+                }, 100);
+            }, 100);
+        }, 100);
         
+        
+
+        
+        
+        
+        
+        
+        
+        //
+        //
+           
+    }
+
 </script>
-
-
-

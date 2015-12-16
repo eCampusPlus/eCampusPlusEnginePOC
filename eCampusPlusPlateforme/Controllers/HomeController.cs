@@ -12,19 +12,24 @@ namespace eCampusPlusPlateforme.Controllers
     {
         public ActionResult Index()
         {
-            //Browser.SetWebDriver("FIREFOX");
+            Browser.SetWebDriver("FIREFOX");
+            return View();
+        }
+
+        public ActionResult Concept()
+        {
             return View();
         }
 
         public ActionResult CampusAccountCreation()
         {
-            //Runner.RunTest(1);
+            Runner.RunTest(1);
             return View("Index");
         }
 
         public ActionResult CampusAccountValidation(string lienValidation)
         {
-            //Runner.RunTest(2,lienValidation);
+            Runner.RunTest(2,lienValidation);
             return View("Index");
         }
 

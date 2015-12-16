@@ -50,7 +50,7 @@ namespace Fr.eCampusPlus.Engine.Runner
                             .Accesses.FirstOrDefault(a => a.AccesseId.Equals(pageId))
                             .Url;
                     page = new Page(plateformeId, pageId, url);
-                    //ProcessingAction(page, eCampusPlusUser, eCampusPlusConfig);
+                    ProcessingAction(page, eCampusPlusUser, eCampusPlusConfig);
                     break;
                 case 2:
                     //Confirmation
@@ -58,7 +58,7 @@ namespace Fr.eCampusPlus.Engine.Runner
                     url = generatedUrl; 
                     //Exemple d'URL "http://pastel.diplomatie.gouv.fr/etudesenfrance/dyn/public/confirmerCompte.html?ticket=083d2bfa-8129-4d2a-b932-3ebbe4a070b7";
                     page = new Page(plateformeId, pageId, url);
-                    //ProcessingAction(page, eCampusPlusUser, eCampusPlusConfig);
+                    ProcessingAction(page, eCampusPlusUser, eCampusPlusConfig);
                     break;
                 case 3:
                     //LOGIN
