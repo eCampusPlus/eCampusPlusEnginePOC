@@ -12,7 +12,7 @@ namespace eCampusPlusPlateforme.Controllers
     {
         public ActionResult Index()
         {
-            Browser.SetWebDriver("FIREFOX");
+            //Browser.SetWebDriver("FIREFOX");
             return View();
         }
 
