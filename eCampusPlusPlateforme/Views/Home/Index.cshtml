@@ -1,168 +1,381 @@
 ﻿@{
-    ViewBag.Title = "eCampus+";
+    ViewBag.Title = "eCampusPlus Plateforme";
 }
-
-
 <div class="col-md-12">
-    <div class="block">
-        <div class="block-title">
-            <h2>Création et saisie du dossier<strong> Campus FRANCE</strong>
-            </h2>
+    <div class="widget" id="eCampusPlusAccount">
+        <div class="widget-extra themed-background-dark">
+            <h3 class="widget-content-light">
+                <em>Création de votre compte </em><strong>eCampusPlus</strong>
+            </h3>
         </div>
-        <form id="basic-wizard" action="" method="" class="form-horizontal form-bordered ui-formwizard">
-            <div id="first" class="step ui-formwizard-content" style="display: block;">
-                <div class="wizard-steps">
-                    <div class="row">
-                        <div class="col-xs-3 active">
-                            <span>1. eCapmus<strong>+</strong></span>
-                        </div>
-                        <div class="col-xs-3">
-                            <span>2. Création</span>
-                        </div>
-                        <div class="col-xs-3">
-                            <span>3. Validation</span>
-                        </div>
-                        <div class="col-xs-3">
-                            <span>4. Saisie</span>
-                        </div>
-                    </div>
+        <div class="widget-extra">
+            <div class="block">
+                <div class="block-title ">
+
                 </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="example-password">Mot de passe</label>
-                    <div class="col-md-6">
-                        <input type="password" id="example-password" name="example-password" class="form-control ui-wizard-content" placeholder="Choose a crazy one..">
+                <form class="form-horizontal form-bordered ui-formwizard">
+                    <br />
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="example-password">Mot de passe</label>
+                        <div class="col-md-6">
+                            <input type="password" id="example-password" name="example-password" class="form-control ui-wizard-content" placeholder="Choisissez votre mot de passe">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="example-password2">Confirmation de mot de passe</label>
-                    <div class="col-md-6">
-                        <input type="password" id="example-password2" name="example-password2" class="form-control ui-wizard-content" placeholder="..and confirm it!">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="example-password2">Confirmation de mot de passe</label>
+                        <div class="col-md-6">
+                            <input type="password" id="example-password2" name="example-password2" class="form-control ui-wizard-content" placeholder="Comfirmer votre mot de passe">
+                        </div>
                     </div>
+                    <div class="form-group form-actions">
+                        <div class="col-md-8 col-md-offset-4">
+                            <input type="reset" class="btn btn-lg btn-default ui-wizard-content ui-formwizard-button" id="back" value="Réinitialiser" disabled="disabled">
+                            <input type="button" class="btn btn-lg btn-success ui-wizard-content ui-formwizard-button" id="next" value="Valider mon compte" onclick="javascript:gotoReport()">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+<div class="widget" id="eCampusPlusServiceChoice">
+    
+    <div class="widget-extra themed-background-dark">
+        <h3 class="widget-content-light">
+            <em>Selectionnez votre service </em><strong>eCampusPlus</strong>
+        </h3>
+    </div>
+    <br />
+    <div class="widget-advanced widget-advanced-alt">
+        <div class="widget-header text-center themed-background col-md-4 col-md-offset-1">
+            <h3 class="widget-content-light text-left pull-left animation-pullDown">
+                <strong>Rapport d'éligibilité à la fromation en <em>FRANCE</em></strong><br>
+                <small><em>Service offert</em></small>
+                <br/>
+                <br/>
+                <i class="fa fa-file-text fa-5x"></i>                
+            </h3>
+            <div id="dash-widget-chart" class="chart"></div>
+        </div>
+        <div class="widget-header text-center themed-background-spring col-md-4 col-md-offset-1">
+            <h3 class="widget-content-light text-left pull-left animation-pullDown">
+                <strong>Création du dossier <em>CAMPUS FRANCE</em></strong><br>
+                <small><em>Service payant</em></small>
+                <br />
+                <br />
+                <i class="gi gi-wallet fa-5x"></i>
+            </h3>
+            <div id="dash-widget-chart" class="chart"></div>
+        </div>
+        <div class="widget-main ">
+            <div class="row text-center">
+                <div class="col-xs-4">
+
                 </div>
             </div>
-            <div id="second" class="step ui-formwizard-content" style="display: none;">
-                <div class="wizard-steps">
-                    <div class="row">
-                        <div class="col-xs-3 done">
-                            <span><i class="fa fa-check"></i></span>
-                        </div>
-                        <div class="col-xs-3">
-                            <span>2. Création</span>
-                        </div>
-                        <div class="col-xs-3">
-                            <span>3. Validation</span>
-                        </div>
-                        <div class="col-xs-3">
-                            <span>4. Saisie</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-12 text-center">
-                        <i class="fa fa-asterisk fa-spin fa-4x text-success"></i>
-                    </div>
-                    <div class="col-md-12 text-center">
-                        <p class="well well-sm">Nous procédons à la création de votre compte <strong>Campus FRANCE</strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div id="third" class="step ui-formwizard-content" style="display: none;">
-                <div class="wizard-steps">
-                    <div class="row">
-                        <div class="col-xs-3 done">
-                            <span><i class="fa fa-check"></i></span>
-                        </div>
-                        <div class="col-xs-3 done">
-                            <span><i class="fa fa-check"></i></span>
-                        </div>
-                        <div class="col-xs-3">
-                            <span>3. Validation</span>
-                        </div>
-                        <div class="col-xs-3">
-                            <span>4. Saisie</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="example-bio">Lien de confirmation de créationde compte</label>
-                    <div class="col-md-8">
-                        <input type="url" id="lienValidation" name="example-password" class="form-control ui-wizard-content" placeholder="URL de validation reçu par mail de Campus FRANCE">
-                    </div>
-                </div>
-                <div class="form-group" id="validationLoader" style="display: none">
-                    <div class="col-md-12 text-center">
-                        <i class="fa fa-asterisk fa-spin fa-4x text-success"></i>
-                    </div>
-                    <div class="col-md-12 text-center">
-                        <p class="well well-sm">Nous procédons à la validation de votre compte <strong>Campus FRANCE</strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div id="fourth" class="step ui-formwizard-content" style="display: none;">
-                <div class="wizard-steps">
-                    <div class="row">
-                        <div class="col-xs-3 done">
-                            <span><i class="fa fa-check"></i></span>
-                        </div>
-                        <div class="col-xs-3 done">
-                            <span><i class="fa fa-check"></i></span>
-                        </div>
-                        <div class="col-xs-3 done">
-                            <span><i class="fa fa-check"></i></span>
-                        </div>
-                        <div class="col-xs-3">
-                            <span>4. Saisie</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-12 text-center">
-                        <i class="fa fa-asterisk fa-spin fa-4x text-success"></i>
-                    </div>
-                    <div class="col-md-12 text-center">
-                        <p class="well well-sm">Nous procédons à la saisie de votre dossier <strong>Campus FRANCE</strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div id="fifth" class="step ui-formwizard-content" style="display: none;">
-                <div class="wizard-steps">
-                    <div class="row">
-                        <div class="col-xs-3 done">
-                            <span><i class="fa fa-check"></i></span>
-                        </div>
-                        <div class="col-xs-3 done">
-                            <span><i class="fa fa-check"></i></span>
-                        </div>
-                        <div class="col-xs-3 done">
-                            <span><i class="fa fa-check"></i></span>
-                        </div>
-                        <div class="col-xs-3 done">
-                            <span><i class="fa fa-check"></i></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-12 text-center">
-                        <i class="fa fa-check-circle fa-5x"></i>
-                    </div>
-                    <div class="col-md-12 text-center">
-                        <p class="well well-sm">Félicitation, la création et la saisie de votre dossier <strong>Campus FRANCE</strong> est terminée avec succes
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group form-actions">
-                <div class="col-md-8 col-md-offset-4">
-                    <input type="reset" class="btn btn-lg btn-default ui-wizard-content ui-formwizard-button" id="back" value="Retour à l'étape précédente" disabled="disabled">
-                    <input type="button" class="btn btn-lg btn-info ui-wizard-content ui-formwizard-button" id="next" value="Passer à l'étape suivante" onclick="javascript:performeAction()">
-                </div>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
+    <div class="widget" id="CampusFranceAccount">
+        <div class="widget-extra themed-background-dark">
+            <h3 class="widget-content-light">
+                <em>Création et saisie du dossier</em><strong> Campus FRANCE</strong>
+            </h3>
+        </div>
+        <div class="widget-extra">
+            <div class="block">
+                <div class="block-title ">
+
+                </div>
+                <form class="form-horizontal form-bordered ui-formwizard">
+                    <div id="first" class="step ui-formwizard-content" style="display: block;">
+                        <div class="wizard-steps">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <span>1. Création</span>
+                                </div>
+                                <div class="col-xs-4">
+                                    <span>2. Validation</span>
+                                </div>
+                                <div class="col-xs-4">
+                                    <span>3. Saisie</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <i class="fa fa-asterisk fa-spin fa-4x text-success"></i>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <p class="well well-sm">
+                                    Nous procédons à la création de votre compte <strong>Campus FRANCE</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="second" class="step ui-formwizard-content" style="display: none;">
+                        <div class="wizard-steps">
+                            <div class="row">
+
+                                <div class="col-xs-4 done">
+                                    <span><i class="fa fa-check"></i></span>
+                                </div>
+                                <div class="col-xs-4">
+                                    <span>2. Validation</span>
+                                </div>
+                                <div class="col-xs-4">
+                                    <span>3. Saisie</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="example-bio">Lien de confirmation de créationde compte</label>
+                            <div class="col-md-8">
+                                <input type="url" id="lienValidation" name="example-password" class="form-control ui-wizard-content" placeholder="URL de validation reçu par mail de Campus FRANCE">
+                            </div>
+                        </div>
+                        <div class="form-group" id="validationLoader" style="display: none">
+                            <div class="col-md-12 text-center">
+                                <i class="fa fa-asterisk fa-spin fa-4x text-success"></i>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <p class="well well-sm">
+                                    Nous procédons à la validation de votre compte <strong>Campus FRANCE</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="third" class="step ui-formwizard-content" style="display: none;">
+                        <div class="wizard-steps">
+                            <div class="row">
+                                <div class="col-xs-4 done">
+                                    <span><i class="fa fa-check"></i></span>
+                                </div>
+                                <div class="col-xs-4 done">
+                                    <span><i class="fa fa-check"></i></span>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <span>3. Saisie</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <i class="fa fa-asterisk fa-spin fa-4x text-success"></i>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <p class="well well-sm">
+                                    Nous procédons à la saisie de votre dossier <strong>Campus FRANCE</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="fourth" class="step ui-formwizard-content" style="display: none;">
+                        <div class="wizard-steps">
+                            <div class="row">
+
+                                <div class="col-xs-4 done">
+                                    <span><i class="fa fa-check"></i></span>
+                                </div>
+                                <div class="col-xs-4 done">
+                                    <span><i class="fa fa-check"></i></span>
+                                </div>
+                                <div class="col-xs-4 done">
+                                    <span><i class="fa fa-check"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <i class="fa fa-check-circle fa-5x"></i>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <p class="well well-sm">
+                                    Félicitation, la création et la saisie de votre dossier <strong>Campus FRANCE</strong> est terminée avec succes
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-actions">
+                        <div class="col-md-8 col-md-offset-4">
+                            <input type="reset" class="btn btn-lg btn-default ui-wizard-content ui-formwizard-button" id="back" value="Précédent" disabled="disabled">
+                            <input type="button" class="btn btn-lg btn-info ui-wizard-content ui-formwizard-button" id="next" value="Suivant" onclick="javascript:performeAction()">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<div class="col-md-12">
+        <div class="block">
+            <div class="block-title ">
+                <h2>
+                    Création et saisie du dossier<strong> Campus FRANCE</strong>
+                </h2>
+            </div>
+            <form id="basic-wizard" action="" method="" class="form-horizontal form-bordered ui-formwizard">
+                <div id="first" class="step ui-formwizard-content" style="display: block;">
+                    <div class="wizard-steps">
+                        <div class="row">
+                            <div class="col-xs-3 active">
+                                <span>1. eCapmus<strong>+</strong></span>
+                            </div>
+                            <div class="col-xs-3">
+                                <span>2. Création</span>
+                            </div>
+                            <div class="col-xs-3">
+                                <span>3. Validation</span>
+                            </div>
+                            <div class="col-xs-3">
+                                <span>4. Saisie</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="example-password">Mot de passe</label>
+                        <div class="col-md-6">
+                            <input type="password" id="example-password" name="example-password" class="form-control ui-wizard-content" placeholder="Choose a crazy one..">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="example-password2">Confirmation de mot de passe</label>
+                        <div class="col-md-6">
+                            <input type="password" id="example-password2" name="example-password2" class="form-control ui-wizard-content" placeholder="..and confirm it!">
+                        </div>
+                    </div>
+                </div>
+                <div id="second" class="step ui-formwizard-content" style="display: none;">
+                    <div class="wizard-steps">
+                        <div class="row">
+                            <div class="col-xs-3 done">
+                                <span><i class="fa fa-check"></i></span>
+                            </div>
+                            <div class="col-xs-3">
+                                <span>2. Création</span>
+                            </div>
+                            <div class="col-xs-3">
+                                <span>3. Validation</span>
+                            </div>
+                            <div class="col-xs-3">
+                                <span>4. Saisie</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12 text-center">
+                            <i class="fa fa-asterisk fa-spin fa-4x text-success"></i>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <p class="well well-sm">
+                                Nous procédons à la création de votre compte <strong>Campus FRANCE</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="third" class="step ui-formwizard-content" style="display: none;">
+                    <div class="wizard-steps">
+                        <div class="row">
+                            <div class="col-xs-3 done">
+                                <span><i class="fa fa-check"></i></span>
+                            </div>
+                            <div class="col-xs-3 done">
+                                <span><i class="fa fa-check"></i></span>
+                            </div>
+                            <div class="col-xs-3">
+                                <span>3. Validation</span>
+                            </div>
+                            <div class="col-xs-3">
+                                <span>4. Saisie</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="example-bio">Lien de confirmation de créationde compte</label>
+                        <div class="col-md-8">
+                            <input type="url" id="lienValidation" name="example-password" class="form-control ui-wizard-content" placeholder="URL de validation reçu par mail de Campus FRANCE">
+                        </div>
+                    </div>
+                    <div class="form-group" id="validationLoader" style="display: none">
+                        <div class="col-md-12 text-center">
+                            <i class="fa fa-asterisk fa-spin fa-4x text-success"></i>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <p class="well well-sm">
+                                Nous procédons à la validation de votre compte <strong>Campus FRANCE</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="fourth" class="step ui-formwizard-content" style="display: none;">
+                    <div class="wizard-steps">
+                        <div class="row">
+                            <div class="col-xs-3 done">
+                                <span><i class="fa fa-check"></i></span>
+                            </div>
+                            <div class="col-xs-3 done">
+                                <span><i class="fa fa-check"></i></span>
+                            </div>
+                            <div class="col-xs-3 done">
+                                <span><i class="fa fa-check"></i></span>
+                            </div>
+                            <div class="col-xs-3">
+                                <span>4. Saisie</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12 text-center">
+                            <i class="fa fa-asterisk fa-spin fa-4x text-success"></i>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <p class="well well-sm">
+                                Nous procédons à la saisie de votre dossier <strong>Campus FRANCE</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="fifth" class="step ui-formwizard-content" style="display: none;">
+                    <div class="wizard-steps">
+                        <div class="row">
+                            <div class="col-xs-3 done">
+                                <span><i class="fa fa-check"></i></span>
+                            </div>
+                            <div class="col-xs-3 done">
+                                <span><i class="fa fa-check"></i></span>
+                            </div>
+                            <div class="col-xs-3 done">
+                                <span><i class="fa fa-check"></i></span>
+                            </div>
+                            <div class="col-xs-3 done">
+                                <span><i class="fa fa-check"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12 text-center">
+                            <i class="fa fa-check-circle fa-5x"></i>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <p class="well well-sm">
+                                Félicitation, la création et la saisie de votre dossier <strong>Campus FRANCE</strong> est terminée avec succes
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group form-actions">
+                    <div class="col-md-8 col-md-offset-4">
+                        <input type="reset" class="btn btn-lg btn-default ui-wizard-content ui-formwizard-button" id="back" value="Retour à l'étape précédente" disabled="disabled">
+                        <input type="button" class="btn btn-lg btn-info ui-wizard-content ui-formwizard-button" id="next" value="Passer à l'étape suivante" onclick="javascript:performeAction()">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>*@
 
 <script type="text/javascript">
     var step = 0;
@@ -170,18 +383,11 @@
     function performeAction() {
         step++;
         if (step == 1) {
-            eCampusAccountCreation();
+            CampusAccountCreation();
         }
         else if (step == 2) {
             CampusAccountValidation();
         }
-        console.log(step);
-    }
-
-    function eCampusAccountCreation() {
-        $('#first').hide();
-        $('#second').show();
-        CampusAccountCreation();
     }
 
     function CampusAccountCreation() {
@@ -189,9 +395,9 @@
             url: "CampusAccountCreation",
             context: document.body
         }).done(function () {
-            $('#second').hide();
-            $('#third').show();
-            
+            $('#first').hide();
+            $('#second').show();
+
         });
     }
     function CampusAccountValidation() {
@@ -204,13 +410,13 @@
             }
         }).done(function () {
             $('#validationLoader').hide();
-            $('#third').hide();
-            $('#fourth').show();
+            $('#second').hide();
+            $('#third').show();
             CampusAccountSetup();
         });
     }
 
-    function CampusAccountSetup() {        
+    function CampusAccountSetup() {
         $.ajax({
             url: "CampusAccountSetup",
             context: document.body,
@@ -218,9 +424,13 @@
                 lienValidation: $("#lienValidation").val()
             }
         }).done(function () {
-            $('#fourth').hide();
-            $('#fifth').show();
+            $('#third').hide();
+            $('#fourth').show();
         });
+    }
+
+    function gotoReport() {
+
     }
 </script>
 
