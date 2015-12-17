@@ -20,13 +20,13 @@ namespace Fr.eCampusPlus.Engine.Runner
             serializer.Converters.Add(new JavaScriptDateTimeConverter());
             serializer.NullValueHandling = NullValueHandling.Ignore;
 
-            using (StreamReader sr = new StreamReader(@"D:\eCampusPlusPOCData\eCampusPlusTestData\eCampusPlusTestData.json"))
+            using (StreamReader sr = new StreamReader(@"E:\eCampusPlusPOCData\eCampusPlusTestData\eCampusPlusTestData.json"))
             {
                 eCampusPlusUser = serializer.Deserialize(sr, eCampusPlusUser.GetType()) as eCampusPlusUser;
             }
             
             var eCampusPlusConfig = new eCampusPlusConfiguration();
-            using (StreamReader sr = new StreamReader(@"D:\eCampusPlusPOCData\eCampusPlusEngineData\eCampusPlusEngineData.json"))
+            using (StreamReader sr = new StreamReader(@"E:\eCampusPlusPOCData\eCampusPlusEngineData\eCampusPlusEngineData.json"))
             {
                 eCampusPlusConfig = serializer.Deserialize(sr, eCampusPlusConfig.GetType()) as eCampusPlusConfiguration;
             }
@@ -102,7 +102,7 @@ namespace Fr.eCampusPlus.Engine.Runner
                 {
                     string value = property .GetValue(eCampusPlusUser).ToString();
                     PagesHelper.PerformAction((PagesHelper.ActionElementType)Enum.Parse(typeof(PagesHelper.ActionElementType), e.ElementType, true), e.Accessor, value);
-                    Thread.Sleep(100);
+                    Thread.Sleep(400);
                     if (e.RequireReload)
                     {
                         Browser.WebDriver.Navigate().Refresh();

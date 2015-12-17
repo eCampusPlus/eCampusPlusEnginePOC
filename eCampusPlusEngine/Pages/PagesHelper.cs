@@ -55,9 +55,12 @@ namespace Fr.eCampusPlus.Engine.Pages
         }
 
         private static void DropdownHelper(string xPath, string value)
-        {            
+        {        
+            Thread.Sleep(1000);
             var selectElement = new SelectElement(Browser.Driver.FindElement(By.XPath(xPath)));
+            Thread.Sleep(1500);
             selectElement.SelectByText(value);
+            
         }
 
         private static void ButtonHelper(string xPath)

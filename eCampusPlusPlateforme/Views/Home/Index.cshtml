@@ -57,69 +57,36 @@
     <br/>
     <br/>
     <img src="~/Content/logoecampusplus.png" id="eCampusPlusLogoImg">
-    <img src="~/Content/logoecampusplus.png" id="eCampusPlusLogoImg1" style="display:none">
-    <img src="~/Content/logoecampusplus.png" id="eCampusPlusLogoImg2" style="display:none">
-    <img src="~/Content/logoecampusplus.png" id="eCampusPlusLogoImg3" style="display:none">
-    <img src="~/Content/logoecampusplus.png" id="eCampusPlusLogoImg4" style="display:none">
-    <img src="~/Content/logoecampusplus.png" id="eCampusPlusLogoImg5" style="display:none">
-    
+    <br/>
+    <i class="fa fa-spinner fa-4x fa-spin" style="margin-left:55px"></i>
 </div> 
 <script>
     function gotoDemo() {
 
-        $('#eCampusPlusLogo').fadeIn(1000);
-        setTimeout(function () {
-            $('#eCampusPlusLogoImg1').css({
-                transform: 'rotate(60deg)'
-            });
-            //$('#eCampusPlusLogoImg').fadeOut();
-            $('#eCampusPlusLogoImg1').fadeIn(1000);
-            setTimeout(function () {
-                $('#eCampusPlusLogoImg2').css({
-                    transform: 'rotate(1200deg)'
-                });
-                //$('#eCampusPlusLogoImg1').fadeOut();
-                $('#eCampusPlusLogoImg2').fadeIn(1000);
-                setTimeout(function () {
-                    $('#eCampusPlusLogoImg3').css({
-                        transform: 'rotate(180deg)'
-                    });
-                    //$('#eCampusPlusLogoImg2').fadeOut();
-                    $('#eCampusPlusLogoImg3').fadeIn(1000);
-                    setTimeout(function () {
-                        $('#eCampusPlusLogoImg4').css({
-                            transform: 'rotate(240deg)'
-                        });
-                        //$('#eCampusPlusLogoImg3').fadeOut();
-                        $('#eCampusPlusLogoImg4').fadeIn(1000);
-                        setTimeout(function () {                            
-                            $('#eCampusPlusLogoImg5').css({
-                                transform: 'rotate(300deg)'
-                            });
-                            //$('#eCampusPlusLogoImg4').fadeOut();
-                            $('#eCampusPlusLogoImg5').fadeIn(1000);
-                            setTimeout(function () {
-                                $('#eCampusPlusLogo').fadeOut();
-                                setTimeout(function () {
-                                    window.location.href = "/Content/website/index.html";
-                                }, 700);
-                            }, 100);
-                        }, 100);
-                    }, 100);
-                }, 100);
-            }, 100);
-        }, 100);
         
-        
+        $('#eCampusPlusLogo').fadeIn(500);
 
-        
-        
-        
-        
-        
-        
-        //
-        //
+        $("#eCampusPlusLogo").animate({
+            'margin-left' : "+=1000px"
+        },500);
+
+        $("#eCampusPlusLogo").animate({
+            'margin-left': "-=500px"
+        }, 250);
+
+        $("#eCampusPlusLogo").animate({
+            'margin-top': "-=50px"
+        }, 100);
+
+        $("#eCampusPlusLogo").animate({
+            'margin-top': "+=50px"
+        }, 100);
+
+        setTimeout(function () {
+            $('#eCampusPlusLogo').fadeOut(500);
+            window.location.href = "/Content/website/index.html";
+        }, 2000);
+
            
     }
 

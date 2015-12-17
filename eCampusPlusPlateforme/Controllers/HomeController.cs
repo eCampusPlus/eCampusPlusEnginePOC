@@ -16,20 +16,25 @@ namespace eCampusPlusPlateforme.Controllers
             return View();
         }
 
-        public ActionResult Concept()
+        public ActionResult ProofOfconcept()
         {
             return View();
         }
 
+        public ActionResult Concept()
+        {
+            return View("Index");
+        }
+
         public ActionResult CampusAccountCreation()
         {
-            Runner.RunTest(1);
+            //Runner.RunTest(1);
             return View("Index");
         }
 
         public ActionResult CampusAccountValidation(string lienValidation)
         {
-            Runner.RunTest(2,lienValidation);
+            //Runner.RunTest(2,lienValidation);
             return View("Index");
         }
 
